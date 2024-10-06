@@ -1,1 +1,1 @@
-import "./switch-case.js"
+import "./reduce.js"
