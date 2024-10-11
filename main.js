@@ -1,1 +1,1 @@
-import "./reduce.js"
+import "./class.js"
