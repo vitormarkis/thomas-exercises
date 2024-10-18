@@ -5,12 +5,32 @@
  * ele acha mais interessante (voce decide quais são).
  */
 
-function conseguirMelhorEstadoDaRegiao(regiao) {}
+function conseguirMelhorEstadoDaRegiao(regiao) {
+  switch (regiao) {
+    case "Sul":
+      console.log("RS");
+      break;
 
-conseguirMelhorEstadoDaRegiao("Sul")
-conseguirMelhorEstadoDaRegiao("Sudeste")
-conseguirMelhorEstadoDaRegiao("Centro-Oeste")
-conseguirMelhorEstadoDaRegiao("Nordeste")
+    case "Sudeste":
+      console.log("SP");
+      break;
+    case "Centro-Oeste":
+      console.log("MT");
+      break;
+
+    case "Nordeste":
+      console.log("RN");
+      break;
+
+    default:
+      console.log("não sei");
+  }
+}
+
+conseguirMelhorEstadoDaRegiao("Sul");
+conseguirMelhorEstadoDaRegiao("Sudeste");
+conseguirMelhorEstadoDaRegiao("Centro-Oeste");
+conseguirMelhorEstadoDaRegiao("Nordeste");
 
 /**
  * Exercicio 2.
@@ -21,5 +41,5 @@ conseguirMelhorEstadoDaRegiao("Nordeste")
  */
 
 /** Descomente as linhas abaixo */
-// conseguirMelhorEstadoDaRegiao("Nordeste")
-// conseguirMelhorEstadoDaRegiao("Noroeste")
+conseguirMelhorEstadoDaRegiao("Nordeste");
+conseguirMelhorEstadoDaRegiao("Noroeste");
