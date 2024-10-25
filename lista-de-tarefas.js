@@ -1,20 +1,20 @@
 console.clear();
 
 function criarListaDeTarefas() {
-  const lista = [];
+  const listaDeTarefas = [];
 
   const adicionarTarefa = (tarefa) => {
-    lista.push(tarefa);
+    listaDeTarefas.push(tarefa);
   };
 
   const listarTarefasPendentes = () => {
-    return lista.filter((tarefa) => {
+    return listaDeTarefas.filter((tarefa) => {
       return tarefa.completo === false;
     });
   };
 
   return {
-    lista,
+    listaDeTarefas,
     adicionarTarefa,
     listarTarefasPendentes,
   };
@@ -38,30 +38,28 @@ function criarTarefa(descricao) {
 }
 const listaDeTarefas = criarListaDeTarefas();
 listaDeTarefas.completar;
-listaDeTarefas.lista;
-
 const listaDeTarefasvitor = criarListaDeTarefas();
 
-function filtrar30dias(lista) {
-  const hoje = new Date();
-
-  const trintadias = new Date();
-  trintadias.setDate(hoje.getDate() - 30);
-  console.log(lista);
-  return lista.filter(
-    (tarefa) => tarefa.criadoEm.getTime() >= trintadias.getTime()
-  );
-}
+const data = new Date("2012-03-06");
+const mess = listaDeTarefas.listaDeTarefas.filter(
+  (checar) => new Date(checar) > new Date("2012-03-01")
+);
 
 const tarefa = criarTarefa("Passear com a luna.");
+tarefa.descricao = "arrumar a cama";
+console.log({ tarefa });
+
 listaDeTarefas.adicionarTarefa(tarefa);
 const tarefasIncompletas = listaDeTarefas.listarTarefasPendentes();
-const datasfiltradas = filtrar30dias(listaDeTarefas.lista);
-console.log(datasfiltradas);
+console.log({ tarefasIncompletas });
+console.log({ listaDeTarefas });
+console.log({
+  mess,
+});
 
 //  compelto 1: deve completar a unica tarefa da lista, de forma que o log de tarefas incompletas seja um array vazio n
 
-// 2: o usuario que listar todas suas tarefas incompletas, mas aparece muitas, ele quer filtrar apenas tarefas dos ultimos 30 dias
+//  completo  2: o usuario que listar todas suas tarefas incompletas, mas aparece muitas, ele quer filtrar apenas tarefas dos ultimos 30 dias
 
 // 3: usuario escreveu uma descricao errada de uma tarefa, crie uma forma dele conseguir editar a descricao de uma tarefa ja registrada
 
