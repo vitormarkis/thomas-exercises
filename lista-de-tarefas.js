@@ -26,6 +26,9 @@ function criarTarefa(descricao) {
   const completar = () => {
     completo = true;
   };
+  const descompletar = () => {
+    completo = false;
+  };
 
   return {
     descricao,
@@ -34,10 +37,12 @@ function criarTarefa(descricao) {
     },
     criadoEm,
     completar,
+    descompletar,
   };
 }
 const listaDeTarefas = criarListaDeTarefas();
 listaDeTarefas.completar;
+listaDeTarefas.descompletar;
 const listaDeTarefasvitor = criarListaDeTarefas();
 
 const data = new Date("2012-03-06");
@@ -51,19 +56,19 @@ console.log({ tarefa });
 
 listaDeTarefas.adicionarTarefa(tarefa);
 const tarefasIncompletas = listaDeTarefas.listarTarefasPendentes();
-console.log({ tarefasIncompletas });
-console.log({ listaDeTarefas });
-console.log({
-  mess,
-});
+// console.log({ tarefasIncompletas });
+// console.log({ listaDeTarefas });
+// console.log({
+//   mess,
+// });
 
 //  compelto 1: deve completar a unica tarefa da lista, de forma que o log de tarefas incompletas seja um array vazio n
 
 //  completo  2: o usuario que listar todas suas tarefas incompletas, mas aparece muitas, ele quer filtrar apenas tarefas dos ultimos 30 dias
 
-// 3: usuario escreveu uma descricao errada de uma tarefa, crie uma forma dele conseguir editar a descricao de uma tarefa ja registrada
+// completo 3: usuario escreveu uma descricao errada de uma tarefa, crie uma forma dele conseguir editar a descricao de uma tarefa ja registrada
 
-// 4: o usuario completou uma tarefa errada sem querer, crie uma funcionalidade de descompletar tarefa
+// completo 4: o usuario completou uma tarefa errada sem querer, crie uma funcionalidade de descompletar tarefa
 
 // 5: usuario quer dar uma limpa nas suas tarefas, esta muito desorganizado,
 //e ele quer remover tarefas nao importantes, crie uma funcionalidade de remover tarefas
