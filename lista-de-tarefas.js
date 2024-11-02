@@ -1,62 +1,77 @@
 console.clear();
 
-function criarListaDeTarefas() {
-  const listaDeTarefas = [];
+function criarListaDeTarefas(descricao) {
+  const atributoss = {
+    descricao,
+    listaDeTarefas: [],
+  };
+  const mudardescricao = (descricao) => {
+    atributos.descricao = descricao;
+  };
 
   const adicionarTarefa = (tarefa) => {
-    listaDeTarefas.push(tarefa);
+    atributoss.listaDeTarefas.push(tarefa);
   };
 
   const listarTarefasPendentes = () => {
-    return listaDeTarefas.filter((tarefa) => {
+    return atributoss.listaDeTarefas.filter((tarefa) => {
       return tarefa.completo === false;
     });
   };
 
   return {
-    listaDeTarefas,
+    atributoss,
     adicionarTarefa,
     listarTarefasPendentes,
   };
 }
 
 function criarTarefa(descricao) {
-  let completo = false;
-  let criadoEm = new Date();
+  const atributos = {
+    completo: false,
+    descricao,
+    criadoEm: new Date(),
+  };
+
   const completar = () => {
-    completo = true;
+    atributos.completo = true;
   };
   const descompletar = () => {
-    completo = false;
+    atributos.completo = false;
   };
 
   return {
-    descricao,
-    get completo() {
-      return completo;
-    },
-    criadoEm,
+    atributos,
     completar,
     descompletar,
   };
 }
-const listaDeTarefas = criarListaDeTarefas();
-listaDeTarefas.completar;
-listaDeTarefas.descompletar;
-const listaDeTarefasvitor = criarListaDeTarefas();
 
+const listaDeTarefas = criarListaDeTarefas("desarumarcama");
+listaDeTarefas.atributoss.descricao;
+
+const listaDeTarefasvitor = criarListaDeTarefas();
 const data = new Date("2012-03-06");
-const mess = listaDeTarefas.listaDeTarefas.filter(
+const mess = listaDeTarefas.atributoss.listaDeTarefas.filter(
   (checar) => new Date(checar) > new Date("2012-03-01")
 );
 
 const tarefa = criarTarefa("Passear com a luna.");
-tarefa.descricao = "arrumar a cama";
-console.log({ tarefa });
-
+// tarefa.mudardescricao("desarumarcama");
+console.log(tarefa);
+// console.log({ tarefa });
+console.log(listaDeTarefas);
 listaDeTarefas.adicionarTarefa(tarefa);
+
+function limpartarefas(listaDeTarefas) {
+  return (tarefasIncompletas = listaDeTarefas.listarTarefasPendentess.filter(
+    (listaDeTarefas) => !listaDeTarefas.listarTarefasPendentes.completo
+  ));
+}
+const listarTarefasPendentes = limpartarefas;
 const tarefasIncompletas = listaDeTarefas.listarTarefasPendentes();
-// console.log({ tarefasIncompletas });
+
+console.log({ tarefasIncompletas });
 // console.log({ listaDeTarefas });
 // console.log({
 //   mess,
@@ -68,9 +83,9 @@ const tarefasIncompletas = listaDeTarefas.listarTarefasPendentes();
 
 // completo 3: usuario escreveu uma descricao errada de uma tarefa, crie uma forma dele conseguir editar a descricao de uma tarefa ja registrada
 
-// completo 4: o usuario completou uma tarefa errada sem querer, crie uma funcionalidade de descompletar tarefa
+// completo 4:o usuario completou uma tarefa errada sem querer, crie uma funcionalidade de descompletar tarefa
 
-// 5: usuario quer dar uma limpa nas suas tarefas, esta muito desorganizado,
+// completo? 5: usuario quer dar uma limpa nas suas tarefas, esta muito desorganizado,
 //e ele quer remover tarefas nao importantes, crie uma funcionalidade de remover tarefas
 
 // 6: o usuario quer listar todas suas tarefas pendentes,
