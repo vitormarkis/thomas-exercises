@@ -1,42 +1,35 @@
-console.clear();
+console.clear()
 
 function criarListaDeTarefas(descricao) {
   const atributoss = {
     descricao,
     listaDeTarefas: [],
-  };
-  const mudardescricao = (descricao) => {
-    atributos.descricao = descricao;
-  };
-  const adicionarTarefa = (tarefa) => {
-    atributoss.listaDeTarefas.push(tarefa);
-  };
+  }
+  const mudardescricao = descricao => {
+    atributos.descricao = descricao
+  }
+  const adicionarTarefa = tarefa => {
+    atributoss.listaDeTarefas.push(tarefa)
+  }
 
-  const listarTarefas = (instrucoes) => {
-    return atributoss.listaDeTarefas.slice(3, 6);
-  };
-
-  const paginarlista = (Array) => {
-    const Tamanho = Math.floor(Array.lenght / 3);
-    const primeiraParte = Array.slice(0, Tamanho);
-    const segundaParte = Array.slice(Tamanho, Tamanho * 2);
-    const TerceiraParte = Array.slice(Tamanho * 2);
-    return [primeiraParte, segundaParte, TerceiraParte];
-  };
+  const listarTarefas = instrucoes => {
+    const fim = instrucoes.pagina * instrucoes.itens_por_pagina
+    const comeco = fim - instrucoes.itens_por_pagina
+    return atributoss.listaDeTarefas.slice(comeco, fim)
+  }
 
   const listarTarefasPendentes = () => {
-    return atributoss.listaDeTarefas.filter((tarefa) => {
-      return tarefa.completo === false;
-    });
-  };
+    return atributoss.listaDeTarefas.filter(tarefa => {
+      return tarefa.completo === false
+    })
+  }
 
   return {
     atributoss,
     adicionarTarefa,
     listarTarefasPendentes,
-    paginarlista,
     listarTarefas,
-  };
+  }
 }
 
 function criarTarefa(descricao) {
@@ -44,51 +37,46 @@ function criarTarefa(descricao) {
     completo: false,
     descricao,
     criadoEm: new Date(),
-  };
+  }
 
-  const limpartarefas = (listaDeTarefas) => {
+  const limpartarefas = listaDeTarefas => {
     return (tarefasIncompsletas = listaDeTarefas.listarTarefasPendentess.filter(
-      (listaDeTarefas) => !listaDeTarefas.listarTarefasPendentes.completo
-    ));
-  };
+      listaDeTarefas => !listaDeTarefas.listarTarefasPendentes.completo
+    ))
+  }
   const completar = () => {
-    atributos.completo = true;
-  };
+    atributos.completo = true
+  }
   const descompletar = () => {
-    atributos.completo = false;
-  };
+    atributos.completo = false
+  }
 
   return {
     atributos,
     completar,
     descompletar,
     limpartarefas,
-  };
+  }
 }
 
-const tarefa1 = criarTarefa("acordar luna", false);
-const tarefa2 = criarTarefa("dar banho no mike", false);
-const tarefa3 = criarTarefa("brincar com a luna", false);
-const tarefa4 = criarTarefa("dar banho na luna", false);
-const tarefa5 = criarTarefa("por racao pra luna", false);
-const tarefa6 = criarTarefa("brincar com o mike", false);
+let listadetarefaspendents
 
-let listadetarefaspendents;
+let listaDeTarefas = criarListaDeTarefas()
+listaDeTarefas.adicionarTarefa(criarTarefa("acordar luna", false))
+listaDeTarefas.adicionarTarefa(criarTarefa("dar banho no mike", false))
+listaDeTarefas.adicionarTarefa(criarTarefa("brincar com a luna", false))
+listaDeTarefas.adicionarTarefa(criarTarefa("dar banho na luna", false))
+listaDeTarefas.adicionarTarefa(criarTarefa("por racao pra luna", false))
+listaDeTarefas.adicionarTarefa(criarTarefa("brincar com o mike", false))
 
-let listaDeTarefas = criarListaDeTarefas();
-listaDeTarefas.adicionarTarefa(tarefa1);
-listaDeTarefas.adicionarTarefa(tarefa2);
-listaDeTarefas.adicionarTarefa(tarefa3);
-listaDeTarefas.adicionarTarefa(tarefa4);
-listaDeTarefas.adicionarTarefa(tarefa5);
-listaDeTarefas.adicionarTarefa(tarefa6);
+console.log("lista de tarefas: ", listaDeTarefas)
 
 console.log(
   listaDeTarefas.listarTarefas({
-    pagina: 1,
+    pagina: 2,
     itens_por_pagina: 2,
   })
-);
+)
 // const tarefasIncompletas = listaDeTarefas.listarTarefasPendentes;
 // listaDeTarefas = criarListaDeTarefas("tarefas listadas", [tarefasIncompletas]);
 // listadetarefaspendents = tarefasIncompletas;
