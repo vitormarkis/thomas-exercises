@@ -5,6 +5,11 @@ function criarListaDeTarefas(descricao) {
     descricao,
     listaDeTarefas: [],
   }
+
+  const removertarefa = () => {
+    atributoss.listaDeTarefas.pop();
+  };
+
   const mudardescricao = descricao => {
     atributos.descricao = descricao
   }
@@ -29,7 +34,8 @@ function criarListaDeTarefas(descricao) {
     adicionarTarefa,
     listarTarefasPendentes,
     listarTarefas,
-  }
+    removertarefa,
+  };
 }
 
 function criarTarefa(descricao) {
@@ -37,6 +43,10 @@ function criarTarefa(descricao) {
     completo: false,
     descricao,
     criadoEm: new Date(),
+  };
+  const modificartarefa = () => {
+    atributos.completo = 
+
   }
 
   const limpartarefas = listaDeTarefas => {
