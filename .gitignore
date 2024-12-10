@@ -22,3 +22,27 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Exclude all video files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.flv
+*.wmv
+*.webm
+
+# Exclude all image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.ico
+*.webp
+
+# Exclude all PDF files
+*.pdf
+
