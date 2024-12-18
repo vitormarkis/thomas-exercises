@@ -11,9 +11,28 @@
 
       a {
         color: red;
+        text-decoration: none;
+        font-weight: bold;
       }
+
       a:visited {
         color: darkred;
+      }
+
+      a:hover {
+        color: black;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: yellowgreen;
+      }
+
+      .especial::before {
+        content: ">";
+      }
+      .especial::after {
+        content: "<";
       }
     </style>
   </head>
@@ -22,15 +41,13 @@
     <ul>
       <li>
         <a
-          href="https://github.com/gustavoguanabara/html-css/tree/master/aulas-pdf"
-        ></a
-        >Repositorio GitHub
+          href="https://github.com/gustavoguanabara/html-css/tree/master/aulas-pdf" target="_blank">Repositorio github</a>
       </li>
       <li>
-        <a href="https://youtu.be/vMlrcOVr7po?si=t5uxCgMNLVC5P-o2"></a>Canal do
-        Youtube
-      </li>
-      <li><a href="https://www.cursoemvideo.com/"></a>Site do Cursoemvideo</li>
-    </ul>
+        <a href="https://youtu.be/vMlrcOVr7po?si=t5uxCgMNLVC5P-o2" class="especial">Canal do
+          Youtube
+        </li></a>
+      <li><a href="https://www.cursoemvideo.com/">Site do Cursoemvideo</li>
+      </ul></a>
   </body>
 </html>
