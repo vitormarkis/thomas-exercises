@@ -6,27 +6,44 @@
     <title>Modelo de Caixas</title>
     <style>
       h1 {
+        /* SIMPLIFICADO */
         background-color: rgb(118, 118, 190);
         height: 300px;
         width: 300px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: rgb(29, 29, 75);
+
+        border: 10px solid rgb(29, 29, 75);
+
+        padding: 10px;
+
+        margin: 20px auto 40px auto;
+
+        outline: spx dashed green;
       }
 
       a {
+        /* NORMAL */
         border-width: 10px;
         border-style: solid;
         border-color: red;
+        
+        padding-top: 10px ;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
       }
     </style>
   </head>
   <body>
     <h1>Exemplo de caixa box-level</h1>
     <p>
-      Paragrafos tamvem são exemplos de bo-level, mas os
+      Paragrafos tambem são exemplos de box-level, mas os
       <a href="#">links são exemplos de caixas inline-level </a>. Vamos ver como
-      tudo isso funcona.
+      tudo isso funciona.
     </p>
   </body>
 </html>
