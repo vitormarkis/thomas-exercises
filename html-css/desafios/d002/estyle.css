@@ -7,7 +7,6 @@
   src: url("../fontes/idroid.otf") format("opentype");
   font-weight: normal;
 }
-
 :root {
   --cor: #c5ebd6;
   --cor1: #83e1ad;
@@ -37,8 +36,12 @@ header > p {
 nav {
   background-color: var(--cor5);
 }
-
-main {
+main img {
+  width: 100;
+}
+main{
+  min-width: 300px;
+  max-width: 1000;
   background-color: white;
 }
 main h1 {
