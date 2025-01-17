@@ -36,8 +36,8 @@ body {
 .board.x .cell:not(.x):not(.circle):hover ::after,
 .board.x .cell:not(.x):not(.circle):hover::before 
 .board.Circle::after.cell:not(.x):not(.circle):hover ::after,
-.board.circle.cell:not(.x):not(.circle):hover::before {
-.cell {
+.board.circle.cell:not(.x):not(.circle):hover::befor 
+.cell { */
   width: 100%;
   height: 100%;
   border: 2px solid white;
