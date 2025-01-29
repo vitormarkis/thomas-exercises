@@ -8,6 +8,18 @@ const placeMark = (cell, classToAdd) => {
   // cell.addEventListener("click", handleClick, { once: true });
 };
 
+const swapTurns = () => {
+  cell.classList = !isCircleTurn;
+  Board.classList.remove("Circle");
+  Board.classList.remove("X");
+
+  if (isCircleTurn) {
+    Board.classList.add("Circle");
+  } else {
+    Board.classList.remove("Circle");
+  }
+};
+
 const handleClick = (e) => {
   // colocar a marca (X ou O)
   const cell = e.target;
