@@ -1,4 +1,5 @@
 const cellElements = document.querySelectorAll("[data-cell]");
+const board = document.querySelector("[data-cell]");
 
 let IsCircleTurn = false;
 
@@ -10,13 +11,14 @@ const placeMark = (cell, classToAdd) => {
 
 const swapTurns = () => {
   cell.classList = !isCircleTurn;
+
   Board.classList.remove("Circle");
   Board.classList.remove("X");
 
   if (isCircleTurn) {
     Board.classList.add("Circle");
   } else {
-    Board.classList.remove("Circle");
+    Board.classList.remove("X");
   }
 };
 
@@ -26,8 +28,10 @@ const handleClick = (e) => {
   const classToAdd = IsCircleTurn ? "circle" : "x";
 
   placeMark(cell, classToAdd);
+
   //checar vitoria
   //checar empate
+
   //Mudar simbolo
 
   swapTurns();
