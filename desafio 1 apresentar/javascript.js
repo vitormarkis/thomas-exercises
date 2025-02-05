@@ -9,11 +9,7 @@ function verificarpessoa(pessoa) {
     (itemnp) => itemnp === "arma" || itemnp === "droga"
   );
 
-  if (pegarItemNaoPermitido.length > 0) {
-    return "Não podera entrar";
-  } else {
-    return "Pode entrar";
-  }
+  return pegarItemNaoPermitido.lenght > 0 ? "nao pode entrar" : "pode entrar";
 }
 
 let verificado1 = verificarpessoa(ederson);
