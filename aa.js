@@ -50,30 +50,59 @@
 
 // SWITCH OR E AND E ??
 
-let thomas = ["chave", "dinheiro", "celular"];
-let vitor = ["dinheiro", "celular", "carteira"];
-let pai = ["dinheiro", "celular", "carteira"];
+// let thomas = ["chave", "dinheiro", "celular"];
+// let vitor = ["dinheiro", "celular", "carteira"];
+// let pai = ["dinheiro", "celular", "carteira"];
 
-function abrirporta(pessoa) {
-  const aloguemtemachave = pessoa.includes("chave") ?? false;
-  const aloguemtemadinheiro = pessoa.includes("dinheiro") ?? false;
+// function abrirporta(pessoa) {
+//   const aloguemtemachave = pessoa.includes("chave") ?? false;
+//   const aloguemtemadinheiro = pessoa.includes("dinheiro") ?? false;
 
-  switch (true) {
-    case aloguemtemachave:
-      return "abriu a porta com a chave";
+//   switch (true) {
+//     case aloguemtemachave:
+//       return "abriu a porta com a chave";
 
-    case aloguemtemadinheiro:
-      return "tem dinheiro mais dinheiro não abre a porta.";
+//     case aloguemtemadinheiro:
+//       return "tem dinheiro mais dinheiro não abre a porta.";
 
-    default:
-      return "não tem dinheiro";
-  }
+//     default:
+//       return "não tem dinheiro";
+//   }
+// }
+
+// let resultado = abrirporta(thomas);
+// let resultado2 = abrirporta(vitor);
+// let resultado3 = abrirporta(pai);
+
+// console.log(resultado);
+// console.log(resultado2);
+// console.log(resultado3);
+
+// factory function CODIGO V1
+
+function formularioempresa(nome, idade, experiencia) {
+  return {
+    nome: nome,
+    idade: idade,
+    experiencia: experiencia,
+    apresentacao: function () {
+      return `bom dia meu nome e ${this.nome} tenho ${this.idade} anos e eu ja trabalhei em ${this.experiencia}.`;
+    },
+  };
 }
 
-let resultado = abrirporta(thomas);
-let resultado2 = abrirporta(vitor);
-let resultado3 = abrirporta(pai);
+const thomas = formularioempresa(
+  "Thomas",
+  13,
+  "um athellier de produtos de chimarrão, chockers correntes, resina, peças e tudo de cuia no geral"
+);
+const samoht = formularioempresa(
+  "Samoth",
+  16,
+  "na verdade eu nunca trabalhei na verdade"
+);
 
-console.log(resultado);
-console.log(resultado2);
-console.log(resultado3);
+//COMEÇAR A FAZER UMA FUNÇAO PROS OBJETOS DO FACTORY FUNCTION
+
+console.log(thomas.apresentacao());
+console.log(samoht.apresentacao());
