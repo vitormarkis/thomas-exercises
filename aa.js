@@ -88,21 +88,36 @@ function formularioempresa(nome, idade, experiencia) {
     apresentacao: function () {
       return `bom dia meu nome e ${this.nome} tenho ${this.idade} anos e eu ja trabalhei em ${this.experiencia}.`;
     },
+    experienciadetalhe: function () {
+      return `minhas experiencias e tudo que eu sei inclui trabalhar em ${this.experiencia}.`;
+    },
+    pergunta: function () {
+      return ` Bom dia ${this.nome}, Você tem experiência anterior na área em que estamos contratando?`;
+    },
+    resposta: function () {
+      return `minha experiencia em trabalho e outras coisas foi ${this.experienciadetalhe}`;
+    },
   };
 }
 
 const thomas = formularioempresa(
   "Thomas",
   13,
-  "um athellier de produtos de chimarrão, chockers correntes, resina, peças e tudo de cuia no geral"
+  "um athellier de produtos de chimarrão, chockers correntes, resina, peças e tudo de cuia no geral que eu trabalhei esse ano"
 );
 const samoht = formularioempresa(
   "Samoth",
   16,
-  "na verdade eu nunca trabalhei na verdade"
+  "na verdade eu nunca trabalhei na verdade e nem tenho experiencia"
 );
 
 //COMEÇAR A FAZER UMA FUNÇAO PROS OBJETOS DO FACTORY FUNCTION
 
 console.log(thomas.apresentacao());
 console.log(samoht.apresentacao());
+
+console.log(thomas.pergunta());
+console.log(samoht.pergunta());
+
+console.log(thomas.resposta());
+console.log(samoht.resposta());
