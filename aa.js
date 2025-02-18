@@ -80,44 +80,61 @@
 
 // factory function CODIGO V1
 
-function formularioempresa(nome, idade, experiencia) {
+function formularioempresa(nome, idade, experiencia, sobreareatformulario) {
   return {
     nome: nome,
     idade: idade,
     experiencia: experiencia,
+    sobreareatformulario: sobreareatformulario,
     apresentacao: function () {
       return `bom dia meu nome e ${this.nome} tenho ${this.idade} anos e eu ja trabalhei em ${this.experiencia}.`;
-    },
-    experienciadetalhe: function () {
-      return `minhas experiencias e tudo que eu sei inclui trabalhar em ${this.experiencia}.`;
     },
     pergunta: function () {
       return ` Bom dia ${this.nome}, Você tem experiência anterior na área em que estamos contratando?`;
     },
     resposta: function () {
-      return `minha experiencia em trabalho e outras coisas foi ${this.experienciadetalhe}`;
+      return `minha experiencia em trabalho e outras coisas foi... ${this.sobreareatformulario}`;
     },
   };
 }
 
-const thomas = formularioempresa(
-  "Thomas",
-  13,
-  "um athellier de produtos de chimarrão, chockers correntes, resina, peças e tudo de cuia no geral que eu trabalhei esse ano"
-);
-const samoht = formularioempresa(
-  "Samoth",
-  16,
-  "na verdade eu nunca trabalhei na verdade e nem tenho experiencia"
-);
+// const thomas = formularioempresa(
+//   "Thomas",
+//   13,
+//   "um athellier de produtos de chimarrão, chockers correntes, resina, peças e tudo de cuia no geral que eu trabalhei esse ano",
+//   "falando serio nunca tive experiencia no asunto"
+// );
+// const samoht = formularioempresa(
+//   "Samoth",
+//   16,
+//   "na verdade eu nunca trabalhei na verdade e nem tenho experiencia",
+//   "por mais qu e eu não tenha trabalhado sou um expert no assunto"
+// );
 
-//COMEÇAR A FAZER UMA FUNÇAO PROS OBJETOS DO FACTORY FUNCTION
+// //COMEÇAR A FAZER UMA FUNÇAO PROS OBJETOS DO FACTORY FUNCTION
 
-console.log(thomas.apresentacao());
-console.log(samoht.apresentacao());
+// console.log(thomas.apresentacao());
+// console.log(samoht.apresentacao());
 
-console.log(thomas.pergunta());
-console.log(samoht.pergunta());
+// console.log(thomas.pergunta());
+// console.log(samoht.pergunta());
 
-console.log(thomas.resposta());
-console.log(samoht.resposta());
+// console.log(thomas.resposta());
+// console.log(samoht.resposta());
+
+//desafio de rotina
+function criarrotina() {
+  let tarefas = [];
+
+function adicionartarefa(descricao) {
+  const novaTarefa = {
+    descricao,
+    concluida: false
+  };
+  tarefas.concat(novatarefa) = {
+ console.log(`Tarefa "${descricao}"  removida`)
+  }
+}
+};
+// irei continuar o codigo amanhã
+
