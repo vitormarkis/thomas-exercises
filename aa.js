@@ -131,10 +131,25 @@ function adicionartarefa(descricao) {
     descricao,
     concluida: false
   };
-  tarefas.concat(novatarefa) = {
+  tarefas.push(novatarefa) = {
  console.log(`Tarefa "${descricao}"  removida`)
+  };
+  function removertarefa(descricao) {
+    const index = tarefas.index(tarefa => tarefa.descricao === descricao);
+      if(index !== -1) {
+        tarefas.splice(index, 1);
+        console.log(`Tarefa "${descricao}" removida`)
+   
+      }
+    }
   }
-}
+  function listartarefa () {
+    console.log(' Lista de Tarefa');
+    tarefas.forEach(Tarefa => {
+      console.log(`${Tarefa.descricao} - ${tarefa.concluida ? 'Concluida' : 'pendente'}$ ` )
+    }) ;
+  }
+return {adicionartarefa, removertarefa, listartarefa};
 };
 // irei continuar o codigo amanhã
 
