@@ -151,5 +151,17 @@ function adicionartarefa(descricao) {
   }
 return {adicionartarefa, removertarefa, listartarefa};
 };
-// irei continuar o codigo amanhã
-//apenas para mandar 
+
+const minharotina = criarrotina();
+
+minharotina.adicionartarefa('acorda')
+minharotina.adicionartarefa('trabalhar')
+minharotina.adicionartarefa('almocar')
+minharotina.adicionartarefa()
+minharotina.adicionartarefa('estudar')
+minharotina.adicionartarefa('Estudar js')
+minharotina.adicionartarefa('nada')
+minharotina.adicionartarefa('dormir')
+
+console.log(minharotina)
+//teoricamente terminado.
