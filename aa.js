@@ -123,45 +123,48 @@ function formularioempresa(nome, idade, experiencia, sobreareatformulario) {
 // console.log(samoht.resposta());
 
 //desafio de rotina
-function criarrotina() {
-  let tarefas = [];
+// function criarrotina() {
+//   let tarefas = [];
 
-function adicionartarefa(descricao) {
-  const novaTarefa = {
-    descricao,
-    concluida: false
-  };
-  tarefas.push(novatarefa) = {
- console.log(`Tarefa "${descricao}"  removida`)
-  };
-  function removertarefa(descricao) {
-    const index = tarefas.index(tarefa => tarefa.descricao === descricao);
-      if(index !== -1) {
-        tarefas.splice(index, 1);
-        console.log(`Tarefa "${descricao}" removida`)
-   
-      }
-    }
-  }
-  function listartarefa () {
-    console.log(' Lista de Tarefa');
-    tarefas.forEach(Tarefa => {
-      console.log(`${Tarefa.descricao} - ${tarefa.concluida ? 'Concluida' : 'pendente'}$ ` )
-    }) ;
-  }
-return {adicionartarefa, removertarefa, listartarefa};
-};
+// function adicionartarefa(descricao) {
+//   const novaTarefa = {
+//     descricao,
+//     concluida: false
+//   };
+//   tarefas.push(novatarefa) = {
+//  console.log(`Tarefa "${descricao}"  removida`)
+//   };
+//   function removertarefa(descricao) {
+//     const index = tarefas.index(tarefa => tarefa.descricao === descricao);
+//       if(index !== -1) {
+//         tarefas.splice(index, 1);
+//         console.log(`Tarefa "${descricao}" removida`)
 
-const minharotina = criarrotina();
+//       }
+//     }
+//   }
+//   function listartarefa () {
+//     console.log(' Lista de Tarefa');
+//     tarefas.forEach(Tarefa => {
+//       console.log(`${Tarefa.descricao} - ${tarefa.concluida ? 'Concluida' : 'pendente'}$ ` )
+//     }) ;
+//   }
+// return {adicionartarefa, removertarefa, listartarefa};
+// };
 
-minharotina.adicionartarefa('acorda')
-minharotina.adicionartarefa('trabalhar')
-minharotina.adicionartarefa('almocar')
-minharotina.adicionartarefa()
-minharotina.adicionartarefa('estudar')
-minharotina.adicionartarefa('Estudar js')
-minharotina.adicionartarefa('nada')
-minharotina.adicionartarefa('dormir')
+// const minharotina = criarrotina();
 
-console.log(minharotina)
+// minharotina.adicionartarefa('acorda')
+// minharotina.adicionartarefa('trabalhar')
+// minharotina.adicionartarefa('almocar')
+// minharotina.adicionartarefa()
+// minharotina.adicionartarefa('estudar')
+// minharotina.adicionartarefa('Estudar js')
+// minharotina.adicionartarefa('nada')
+// minharotina.adicionartarefa('dormir')
+
+// console.log(minharotina)
 //teoricamente terminado.
+
+//AGORA 26/02 COMEÇO UM NOVO PROJETO DE LAÇOS
+//APENAS PARA SALVAR
