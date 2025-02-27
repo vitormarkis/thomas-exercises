@@ -168,3 +168,22 @@ function formularioempresa(nome, idade, experiencia, sobreareatformulario) {
 
 //AGORA 26/02 COMEÇO UM NOVO PROJETO DE LAÇOS
 //APENAS PARA SALVAR
+
+//Desafio: Crie um objeto que representa uma pessoa, contendo várias
+// propriedades como nome, idade, cidade, e hobbies.
+//  Em seguida, escreva um código que use o laço for...in para listar todas as propriedades
+//  desse objeto, mostrando tanto o nome das propriedades quanto seus valores.
+
+let garotolindo = {
+  nome: "thomas",
+  idade: 13,
+  cidade: "novohamburgo",
+  hobbie1: "desenhar",
+  hobbie2: "usarocelular",
+};
+
+function mostrarpropriedades() {
+  for (let chave in thomas) console.log(chave + "; " + pessoa[chave]);
+}
+
+console.log(garotolindo);
