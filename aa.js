@@ -80,23 +80,23 @@
 
 // factory function CODIGO V1
 
-function formularioempresa(nome, idade, experiencia, sobreareatformulario) {
-  return {
-    nome: nome,
-    idade: idade,
-    experiencia: experiencia,
-    sobreareatformulario: sobreareatformulario,
-    apresentacao: function () {
-      return `bom dia meu nome e ${this.nome} tenho ${this.idade} anos e eu ja trabalhei em ${this.experiencia}.`;
-    },
-    pergunta: function () {
-      return ` Bom dia ${this.nome}, Você tem experiência anterior na área em que estamos contratando?`;
-    },
-    resposta: function () {
-      return `minha experiencia em trabalho e outras coisas foi... ${this.sobreareatformulario}`;
-    },
-  };
-}
+// function formularioempresa(nome, idade, experiencia, sobreareatformulario) {
+//   return {
+//     nome: nome,
+//     idade: idade,
+//     experiencia: experiencia,
+//     sobreareatformulario: sobreareatformulario,
+//     apresentacao: function () {
+//       return `bom dia meu nome e ${this.nome} tenho ${this.idade} anos e eu ja trabalhei em ${this.experiencia}.`;
+//     },
+//     pergunta: function () {
+//       return ` Bom dia ${this.nome}, Você tem experiência anterior na área em que estamos contratando?`;
+//     },
+//     resposta: function () {
+//       return `minha experiencia em trabalho e outras coisas foi... ${this.sobreareatformulario}`;
+//     },
+//   };
+// }
 
 // const thomas = formularioempresa(
 //   "Thomas",
@@ -174,6 +174,20 @@ function formularioempresa(nome, idade, experiencia, sobreareatformulario) {
 //  Em seguida, escreva um código que use o laço for...in para listar todas as propriedades
 //  desse objeto, mostrando tanto o nome das propriedades quanto seus valores.
 
+// let garotolindo = {
+//   nome: "thomas",
+//   idade: 13,
+//   cidade: "novohamburgo",
+//   hobbie1: "desenhar",
+//   hobbie2: "usarocelular",
+// };
+
+// function mostrarpropriedades() {
+//   for (let chave in thomas) console.log(chave + "; " + pessoa[chave]);
+// }
+
+// console.log(garotolindo);
+
 let garotolindo = {
   nome: "thomas",
   idade: 13,
@@ -183,7 +197,11 @@ let garotolindo = {
 };
 
 function mostrarpropriedades() {
-  for (let chave in thomas) console.log(chave + "; " + pessoa[chave]);
+  const chaves = Object.keys(garotolindo);
+  for (let i = 0; i < chaves.length; i++) {
+    let chave = chaves[i];
+    console.log(chave + ":" + [chave]);
+  }
 }
 
 console.log(garotolindo);
