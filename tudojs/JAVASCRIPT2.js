@@ -208,12 +208,20 @@ console.log(garotolindo);
 
 //multiplicação com for
 
-let numero = 2;
+// let numero = 2;
 
-for (let i = 1; i <= 10; i++) {
-  let resultado = numero * i;
-  console.log(`${}`)
+// for (let i = 1; i <= 10; i++) {
+//   let resultado = numero * i;
+//   console.log(`${numero} x ${i} = ${resultado}`);
+// }
+
+for (let m = 20; m >= 1; i--) {
+  console.log(`${m}...`);
 }
+
+console.log("feliz Ano Novo");
+
+//consolelog  imprime a expressão formatada para mostrar a multiplicação.
 
 // nn consigo enviar pra nuvem ent aq esta
 //fiz anotações importantes e no final comecei esse codigo q e simples
