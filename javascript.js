@@ -20,13 +20,13 @@ console.log(verificado1);
 // console.log(verificado2);
 // console.log(verificado3);
 
-// resumo codigo
+// resumo codigoo
 //linhas 3, 4 e 5
 // criei 3 arrays com 2 com os itens proibidos
 
 // criei uma função  que tem como parametro pessoa que e basicamente um array
 
-// na linha 8 eu criei a funçao da propria função o usando o filter filtrando/
+// na linha 8 eu criei o sistema da propria função usando o filter filtrando/
 //  criando um novo array que passou sob as condições
 
 // as palavras arma e droga(os itens não permitidos), o ||
