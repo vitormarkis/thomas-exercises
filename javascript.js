@@ -1,20 +1,30 @@
 //cuidar festas arrays e if e else
 //itemnp item não permitido
-const enaldo = ["bilheteentrar", "ententidade", "arma", "droga"];
-const ricardo = ["bilheteentrar", "dinheiro", "ententidade", "arma"];
-const ederson = ["bilheteentrar", "dinheiro", "ententidade", "celular"];
+const items_mochila_enaldo = [
+  "bilheteentrar",
+  "identidade",
+  "faca",
+  "bebida",
+];
+const ricardo = ["bilheteentrar", "dinheiro", "identidade", "faca"];
+const ederson = [
+  "bilheteentrar",
+  "dinheiro",
+  "identidade",
+  "celular",
+];
 
-function verificarpessoa(pessoa) {
-  const pegarItemNaoPermitido = pessoa.filter(
-    (itemnp) => itemnp === "arma" || itemnp === "droga"
+function verificarPertencesDaPessoa(pertencesPessoa) {
+  const itensNaoPermitidos = pertencesPessoa.filter(
+    (item) => item === "faca" || item === "bebida"
   );
 
-  return pegarItemNaoPermitido.lenght > 0 ? "nao pode entrar" : "pode entrar";
+  return itensNaoPermitidos.length === 0 ? "A" : "C";
 }
 
-let verificado1 = verificarpessoa(ederson);
-let verificado2 = verificarpessoa(enaldo);
-let verificado3 = verificarpessoa(ricardo);
+let verificado1 = verificarPertencesDaPessoa(ederson);
+let verificado2 = verificarPertencesDaPessoa(items_mochila_enaldo);
+let verificado3 = verificarPertencesDaPessoa(ricardo);
 
 console.log(verificado1);
 // console.log(verificado2);
@@ -29,8 +39,8 @@ console.log(verificado1);
 // na linha 8 eu criei o sistema da propria função usando o filter filtrando/
 //  criando um novo array que passou sob as condições
 
-// as palavras arma e droga(os itens não permitidos), o ||
-//  ta verificando se tem os itens arma ou droga
+// as palavras faca e bebida(os itens não permitidos), o ||
+//  ta verificando se tem os itens faca ou bebida
 
 //o if e o els estão dando a resposta da function se tiver itemnp if se nn tiver else
 
@@ -42,3 +52,9 @@ console.log(verificado1);
 
 //  o "> 0" e uma expressão condicional, ele esta verificando se o valor a esquerda e maior do que o 0, ele serve no codigo para verificar se tem itens não permitidos no array pegaritemnãopermitido
 // o que e o === verifica o valor e o tipo dos operandos.
+
+// === - compara o valor da esquerda com o valor da direita
+
+// || signifca OU
+
+// Ternario: ? : INCERTEZA, PODE SER TRUE OU FALSE ? VALOR SE FOR TRUE : VALOR SE FOR FALSE
